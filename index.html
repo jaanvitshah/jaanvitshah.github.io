@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaanvi Shah | Portfolio</title>
+    <!-- Tailwind CSS for clean, medical-tech aesthetic -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .pillar-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+            
+        <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-center gap-4 text-center">
+            <img src="./j_photo_16.jpeg" alt="Option 16" class="w-24 h-24 rounded-full object-cover object-[50%_10%] shadow-sm border border-slate-200">
+            <h1 class="text-2xl font-bold tracking-tight text-slate-900">Jaanvi Shah <span class="text-slate-400 font-normal mx-2">|</span> Portfolio</h1>
+            <img src="./j_photo_14.png" alt="Option 14" class="w-24 h-24 rounded-full object-cover shadow-sm border border-slate-200">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-10">
+
+        
+        
+
+
+        
+        <div id="tab-hero" class="block">
+            <div class="pillar-card p-5">
+                                                <!-- Main Hero Video -->
+                <div class="video-container mb-4 shadow-lg border border-slate-200">
+                    <iframe id="hero-iframe" src="https://www.youtube.com/embed/IWRBCS-u45o?rel=0&cc_load_policy=0&iv_load_policy=3" class="absolute top-0 left-0 w-full h-full rounded-md" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="mb-6 px-2">
+                    <h3 id="hero-title" class="text-lg font-bold text-slate-900 mb-1">My contribution to our team effort winning 1st place in Team Challenge Competition</h3>
+                    <p id="hero-desc" class="text-sm text-slate-700">Pitched a solution to hiring dilemma regarding the use of social media background in determining most qualified candidates. Presented approach to 8 judges and an audience of 300+</p>
+                </div>
+                
+                                  <!-- Thumbnails Row -->
+                  <div class="grid grid-cols-2 gap-4">
+                      <!-- Thumb 1: Ethics -->
+                      <div onclick="setHero('https://www.youtube.com/embed/IWRBCS-u45o?rel=0&cc_load_policy=0&iv_load_policy=3', 'My contribution to our team effort winning 1st place in Team Challenge Competition', 'Pitched a solution to hiring dilemma regarding the use of social media background in determining most qualified candidates. Presented approach to 8 judges and an audience of 300+')" class="cursor-pointer group relative rounded-lg overflow-hidden border-2 border-transparent hover:border-blue-500 transition-all">
+                          <div class="aspect-video bg-slate-200 relative">
+                              <img src="https://img.youtube.com/vi/IWRBCS-u45o/mqdefault.jpg" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all">
+                          </div>
+                          <p class="text-xs font-semibold text-center mt-1">Ethics <span class="text-slate-500 font-normal">(1:27)</span></p>
+                      </div>
+                      <!-- Thumb 2: Dance Highlight -->
+                      <div onclick="setHero('https://www.youtube.com/embed/NZb2zWyhkjU?rel=0&cc_load_policy=0&iv_load_policy=3', 'My team and I enacted the 10 Avatarams of Vishnu', 'This 1 minute abhinaya (storytelling) is showcasing the aggressive, tyrannical demon king, Hiranyakashipu, opposite Prahlad. The entire performance was 15 minutes.')" class="cursor-pointer group relative rounded-lg overflow-hidden border-2 border-transparent hover:border-blue-500 transition-all">
+                          <div class="aspect-video bg-slate-200 relative">
+                              <img src="https://img.youtube.com/vi/NZb2zWyhkjU/mqdefault.jpg" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all">
+                          </div>
+                          <p class="text-xs font-semibold text-center mt-1">Dance <span class="text-slate-500 font-normal">(1 min)</span></p>
+                      </div>
+                                        </div>
+              </div>
+          </div>
+            </div>
+        </div>
+
+            </main>
+    <script>
+        function setHero(url, title, desc) {
+            document.getElementById('hero-iframe').src = url;
+            if (title && desc) {
+                document.getElementById('hero-title').innerText = title;
+                document.getElementById('hero-desc').innerText = desc;
+            }
+        }
+    </script>
+</body>
+</html>
